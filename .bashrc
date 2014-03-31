@@ -15,8 +15,6 @@ esac
 if ! ps -e | grep "irssi" > /dev/null
 then
     screen -S irc -d -m usewithtor irssi
-else
-    echo "irssi already running"
 fi
 
 # "in my .bashrc allows me to start typing a command (like "vim ") 
