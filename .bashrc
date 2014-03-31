@@ -1,13 +1,9 @@
 # welcome to my .bashrc, nothing much interesting and most of it is pilfered from
 # looking at others .bashrc and running google-copy-paste cycles.
 
-
-
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-
-
 
 # If not running interactively, don't do anything
 case $- in
@@ -28,11 +24,6 @@ fi
 # (think ctrl-r) " - http://www.reddit.com/r/linuxadmin/comments/1x0ql2/whats_a_linux_command_you_wish_you_had_known/cf7tbne
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
-
-# open emacs to org agenda list from command line
-alias org='emacs -nw -f org-agenda-list'
-# TODO modify org command so it dumps to agenda to stdout 
-
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -127,8 +118,6 @@ if [ -f ~/.bash_aliases_private ]; then
     . ~/.bash_aliases_private
 fi
 
-
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -146,12 +135,10 @@ export PATH=$PATH:$GOROOT/bin
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-
 #to enable RVM to load the right environment
 function rvm_enable { 
     source $(rvm 2.0.0 do rvm env --path)
 }
-
 
 #caps lock as control key - end emacs pinky!
 setxkbmap -option ctrl:nocaps
@@ -159,14 +146,11 @@ setxkbmap -option ctrl:nocaps
 # Save and reload the history after each command finishes (for shared history)
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-
 export PERL_LOCAL_LIB_ROOT="/home/malaparte/perl5";
 export PERL_MB_OPT="--install_base /home/malaparte/perl5";
 export PERL_MM_OPT="INSTALL_BASE=/home/malaparte/perl5";
 export PERL5LIB="/home/malaparte/perl5/lib/perl5/x86_64-linux-gnu-thread-multi:/home/malaparte/perl5/lib/perl5";
 export PATH="/home/malaparte/perl5/bin:$PATH";
-
-
 
 # TODO there is some way to do this that I learnt recently
 # that is completely ridiculous, obvious and simple that when
@@ -197,7 +181,6 @@ alias eg='emacs &'
 
 # possible idea for torifying emacs
 # alias emacs='torify emacs'
-
 
 PATH="$PATH:$(readlink -f .)/bin/"
 
