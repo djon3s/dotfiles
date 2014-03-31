@@ -95,18 +95,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -120,6 +108,11 @@ fi
 if [ -f ~/.bash_aliases_private ]; then
     . ~/.bash_aliases_private
 fi
+
+# for some random perl cruft I'm not sure I use, if anything breaks, uncomment
+#if [ -f ~/.perl ]; then
+#    . ~/.perl
+#fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -148,12 +141,6 @@ setxkbmap -option ctrl:nocaps
 
 # Save and reload the history after each command finishes (for shared history)
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
-
-export PERL_LOCAL_LIB_ROOT="/home/malaparte/perl5";
-export PERL_MB_OPT="--install_base /home/malaparte/perl5";
-export PERL_MM_OPT="INSTALL_BASE=/home/malaparte/perl5";
-export PERL5LIB="/home/malaparte/perl5/lib/perl5/x86_64-linux-gnu-thread-multi:/home/malaparte/perl5/lib/perl5";
-export PATH="/home/malaparte/perl5/bin:$PATH";
 
 # TODO there is some way to do this that I learnt recently
 # that is completely ridiculous, obvious and simple that when
