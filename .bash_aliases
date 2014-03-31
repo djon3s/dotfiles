@@ -23,3 +23,8 @@ alias pips="pip search"
 #
 #  TODO: aliases for quickly getting things from org-files to std-out
 #
+# open emacs to org agenda list from command line
+alias org='emacs -nw -f org-agenda-list'
+# TODO: modify org command so it dumps to agenda to stdout 
+
+
