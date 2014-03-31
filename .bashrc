@@ -16,7 +16,12 @@ case $- in
 esac
 
 # start irssi in screen in detatched mode for session name "irc"
-if ! ps -e | grep "irssi" > /dev/null; then screen -S irc -d -m usewithtor irssi 
+if ! ps -e | grep "irssi" > /dev/null
+then
+    screen -S irc -d -m usewithtor irssi
+else
+    echo "irssi already running"
+fi
 
 # "in my .bashrc allows me to start typing a command (like "vim ") 
 # and then use my up and down arrows to search through my history 
