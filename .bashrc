@@ -1,6 +1,11 @@
 # welcome to my .bashrc, nothing much interesting and most of it is pilfered from
 # looking at others .bashrc and running google-copy-paste cycles.
 
+# TODO combine bashes readline kill/copy with emacs kill ring
+# maybe try http://stackoverflow.com/questions/994563/integrate-readlines-kill-ring-and-the-x11-clipboard given we have emacs kill ring integrated with the X11 clipboard
+# if you're reading this and know how to do it please open an issue!
+
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
