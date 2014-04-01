@@ -169,7 +169,6 @@ alias actenv='source env/bin/activate'
 alias e='emacs -nw'
 alias eg='emacs &'
 
-# possible idea for torifying emacs
 # alias emacs='torify emacs'
 
 PATH="$PATH:$(readlink -f .)/bin/"
