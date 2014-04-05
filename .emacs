@@ -266,6 +266,7 @@ If the new path's directories does not exist, create them."
              "* TODO %?\n  %i\n  %a")
 	("e" "Emacs" entry (file+headline "~/org/learning/emacs_commands.org" "Emacs Commands"))
 	("u" "Unix" entry (file+headline "~/org/learning/unix_commands.org" "Unix Commands"))
+	("c" "C" entry (file+headline "~/org/learning/c_lang.org" "C Syntax"))	
 	("l" "Lua" entry (file+headline "~/org/learning/lua_syntax.org" "Lua Syntax"))
 	("g" "Git" entry (file+headline "~/org/learning/git_commands.org" "Git Commands"))
         ("j" "Journal" entry (file+datetree "~/org/journal.org")
