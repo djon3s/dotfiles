@@ -25,7 +25,7 @@ if [ ! ${#} -ge 3 ]; then
 fi
 
 # tools
-_EMACSCLIENT=/usr/local/bin/emacsclient
+_EMACSCLIENT=$(which emacsclient)
 _BASENAME=/bin/basename
 _CP=/bin/cp
 _EGREP=/bin/egrep
