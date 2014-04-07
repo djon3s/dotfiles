@@ -3,13 +3,12 @@
     (server-start))
 ;; (message "server running") etc
 ;; big assumption above is that 'server-process is not bound to *anything* when emacs is not being run as a server
-
+;; equivalent to check if started as a daemon is (daemonp)
+;; server just allows you to send files to existing emacs from emacs client 
 
 ;; Use ido-mode everywhere
 ;(require 'ido)
 ;(ido-mode t)
-
-
 
 ;; Smex is cool (from 
 (global-set-key (kbd "M-x") 'smex)
