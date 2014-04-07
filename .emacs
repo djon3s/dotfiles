@@ -1,5 +1,9 @@
-;; Start the server on first load
-;;(server-start)
+;; Check if emacs is running as a server, if it isn't, run the server on first load
+(if (not (boundp 'server-process))
+    (server-start))
+;; (message "server running") etc
+;; big assumption above is that 'server-process is not bound to *anything* when emacs is not being run as a server
+
 
 ;; Use ido-mode everywhere
 ;(require 'ido)
