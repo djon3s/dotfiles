@@ -267,7 +267,7 @@ If the new path's directories does not exist, create them."
       '(("t" "Todo" entry (file+headline "~/org/todo.org" "Tasks")
              "* TODO %?\n  %i\n  %a")
 	("e" "Emacs" entry (file+headline "~/org/learning/emacs_commands.org" "Emacs Commands"))
-	("w" "words" entry (file+headline "~/org/learning/new_words.org" "New words"))
+	("w" "Words" entry (file+headline "~/org/learning/new_words.org" "New words"))
 	("u" "Unix" entry (file+headline "~/org/learning/unix_commands.org" "Unix Commands"))
 	("c" "C" entry (file+headline "~/org/learning/c_lang.org" "C Syntax"))	
 	("l" "Lua" entry (file+headline "~/org/learning/lua_syntax.org" "Lua Syntax"))
@@ -437,5 +437,5 @@ If the new path's directories does not exist, create them."
 
 
 
-(add-hook 'love-minor-mode (setq love-local-documentation-path "/usr/share/doc/love/html/"))
+(add-hook 'love-minor-mode (setq love-local-documentation-path "/usr/share/doc/love/html/")) ;; TODO this doesn't seem to work, the mode is outdated compared to the documentation - figure out problem and give pull request?
 (put 'downcase-region 'disabled nil)
