@@ -1,6 +1,21 @@
 #!/bin/bash
 
-# Pilfered from http://stackoverflow.com/questions/1817370/using-ediff-as-git-mergetool Credit completely to the authors there.
+###########################################################################
+# Pilfered from								  #
+# http://stackoverflow.com/questions/1817370/using-ediff-as-git-mergetool #
+# Credit completely to the author 'u-punkt' there.			  #
+###########################################################################
+
+# Add the following to your ~/.gitconfig
+
+##########################################################################
+# [merge]								 #
+#         tool = ediff							 #
+# 									 #
+# [mergetool "ediff"]							 #
+#         cmd = /path/to/ediff-merge-script $LOCAL $REMOTE $MERGED $BASE #
+#         trustExitCode = true						 #
+##########################################################################
 
 # test args
 if [ ! ${#} -ge 3 ]; then
