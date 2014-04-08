@@ -7,15 +7,19 @@
 ;; server just allows you to send files to existing emacs from emacs client 
 
 ;; Use ido-mode everywhere
-;(require 'ido)
-;(ido-mode t)
+;;(require 'ido)
+;;(ido-mode t)
+
+;; After C-h i & C-h m if that doesn't find what I'm looking for in manual,
+;; try helm-info-at-point
+
+(global-set-key (kbd "C-h C-i") 'helm-info-at-point)
 
 ;; Smex is cool (from 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-
 
 ;; Easier to look up source code for elisp function in environment quickly
 (global-set-key (kbd "C-h C-f") 'find-function)
@@ -438,7 +442,8 @@ If the new path's directories does not exist, create them."
 ;        ))
 ;; (yas-global-mode 1) ;; or M-x yas-reload-all if you've started YASnippet already.
 
-
-
-(add-hook 'love-minor-mode (setq love-local-documentation-path "/usr/share/doc/love/html/")) ;; TODO this doesn't seem to work, the mode is outdated compared to the documentation - figure out problem and give pull request?
-(put 'downcase-region 'disabled nil)
+;(add-hook 'love-minor-mode 'love-local-doc-path)
+;(defun love-local-doc-path ()
+;	 (setq love-local-documentation-path "/usr/share/doc/love/html/")) ;; TODO this doesn't seem to work, the mode is outdated compared to the documentation - figure out problem and give pull request?
+;;(put 'downcase-region 'disabled nil)
+;;(require 'love-minor-mode)
