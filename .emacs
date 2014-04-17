@@ -98,10 +98,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(blink-cursor-mode nil)
  '(custom-enabled-themes (quote (tango-dark)))
  '(custom-safe-themes
    (quote
-    ("6e92ca53a22d9b0577ad0b16e07e2e020c8b621197e39fec454048e51b7954cb" default)))
+    ("98c37cf362757a398bcfba40b14158d97db42a1e03deec839a9466c7e7431676" "8ac31e1bc1920b33d478dfafb0b45989a00ede15a2388ea16093e7d0988c48d0" "6e92ca53a22d9b0577ad0b16e07e2e020c8b621197e39fec454048e51b7954cb" default)))
  '(org-agenda-files
    (quote
     ("~/org/sundaynight_30_march_2014.org" "~/success.org")))
@@ -183,6 +184,10 @@ If the new path's directories does not exist, create them."
 ;; change to a better buffer mode
 (global-set-key (kbd "\C-x \C-b") 'ibuffer)
 
+(global-set-key (kbd "\C-x b") 'switch-to-buffer) ;; TODO can we find a better one for tab completion?
+
+;; keybinding for idomenu so that we can quickly navigate to headers etc with ido
+(global-set-key (kbd "\C-x \C-m") 'idomenu)
 
 
 ;; Some configurations for mutt
@@ -447,3 +452,26 @@ If the new path's directories does not exist, create them."
 ;	 (setq love-local-documentation-path "/usr/share/doc/love/html/")) ;; TODO this doesn't seem to work, the mode is outdated compared to the documentation - figure out problem and give pull request?
 ;;(put 'downcase-region 'disabled nil)
 ;;(require 'love-minor-mode)
+
+
+;; hang-ups to solve
+;; launch server on startup and rebind "emacs" to "emacsclient"
+;; auto-save desktop file, but keep some sort of revision history, perhaps git?
+
+;; quicker-easier buffer finding (when you forget name but just remember "that one")
+;; when C-x b to change buffers, then <TAB> should sort by last used or most commonly used <C-x b <TAB> c> - look at ibuffer functionality
+;;;; Useful Functions
+:; on normal C-x b <TAB> it calls 
+;; (minibuffer-complete)
+;; the ibuffer equivalent of the most recent is the
+;; (ibuffer-do-sort-by-recency)
+
+;; auto-save desktop file, but keep some sort of revision history, perhaps git?
+
+;; other idea is to save desktop files 
+
+;; Way to run arbitrary shell commands on files in dired
+;; see http://www.masteringemacs.org/articles/2014/04/10/dired-shell-commands-find-xargs-replacement/
+(add-hook 'dired-load-hook
+          (lambda ()
+            (load "dired-x")))
