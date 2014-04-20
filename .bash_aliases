@@ -1,3 +1,6 @@
+# convenient alias to tell us how mime interprets the type of a file 
+alias typeof='mimedb -t'
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
