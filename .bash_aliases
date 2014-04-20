@@ -27,4 +27,17 @@ alias pips="pip search"
 alias org='emacs -nw -f org-agenda-list'
 # TODO: modify org command so it dumps to agenda to stdout 
 
+# PRETTY COLOR aliases
+# 
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
 
+#alias man_e 'emacsclient --eval "(woman (shell-quote-argument \"$1\"))"'
