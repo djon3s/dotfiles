@@ -1,6 +1,9 @@
 # convenient alias to tell us how mime interprets the type of a file 
 alias typeof='mimedb -t'
 
+# less keystrokes than ps -e | grep <name>
+alias fps='ps -e | grep'
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
