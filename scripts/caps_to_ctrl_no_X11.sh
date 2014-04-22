@@ -9,3 +9,5 @@ echo "keycode 58 = Control" >> ~/.keymap_caps2ctrl_no_X
 sudo loadkeys ~/.keymap_caps2ctrl_no_X
 
 # to unload, sudo loadkeys -d
+
+# TODO: make this an init script 
