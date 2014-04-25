@@ -284,6 +284,8 @@ If the new path's directories does not exist, create them."
 	("c" "C" entry (file+headline "~/org/learning/c_lang.org" "C Syntax"))	
 	("l" "Lua" entry (file+headline "~/org/learning/lua_syntax.org" "Lua Syntax"))
 	("g" "Git" entry (file+headline "~/org/learning/git_commands.org" "Git Commands"))
+	("n" "Networking" entry (file+headline "~/org/learning/networking.org" "Networking"))
+	("p" "PHP" entry (file+headline "~/org/learning/PHP_syntax.org" "PHP Syntax"))
         ("j" "Journal" entry (file+datetree "~/org/journal.org")
              "* %?\nEntered on %U\n  %i\n  %a")))
 
