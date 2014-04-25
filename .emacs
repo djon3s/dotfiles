@@ -478,5 +478,5 @@ If the new path's directories does not exist, create them."
 
 
 ;; required to enable color-theme-approximate to have themes safely degrade in term mode
-;(autoload 'color-theme-approximate-on "color-theme-approximate")
-;(color-theme-approximate-on)
+(autoload 'color-theme-approximate-on "color-theme-approximate")
+(color-theme-approximate-on)
