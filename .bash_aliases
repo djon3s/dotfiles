@@ -32,6 +32,17 @@ alias pips="pip search"
 #
 # open emacs to org agenda list from command line
 alias org='emacs -nw -f org-agenda-list'
+
+# TODO: (commented out, I sort of want it to be more like task manager, not rely on X)
+# can we execute *just* the elisp required to get an agenda rather than loading up emacs?
+# alias org='
+# if ps -e | grep emacs > /dev/null
+#    then
+#        emacsclient -nw -f org-agenda-list 
+#    else
+#        emacs -nw -f org-agenda-list
+# fi'
+       
 # TODO: modify org command so it dumps to agenda to stdout 
 
 # PRETTY COLOR aliases
