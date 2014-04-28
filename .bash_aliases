@@ -50,6 +50,7 @@ fi
 #alias man_e 'emacsclient --eval "(woman (shell-quote-argument \"$1\"))"'
 
 # find big files I could delete
+alias fbf="du -chs * | sort -h | tail -n 10"
 alias find_big_files="du -chs * | sort -h | tail -n 10"
 
 # to stop annoyances of difference between emacs and nano
