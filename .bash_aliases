@@ -22,6 +22,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 #
 # Search apt-cache way more easily
 alias acs="apt-cache search"
+alias acs-v="apt-cache show" 
 # Search pip way more easily
 alias pips="pip search"
 
