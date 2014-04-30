@@ -482,3 +482,9 @@ If the new path's directories does not exist, create them."
 ;; required to enable color-theme-approximate to have themes safely degrade in term mode
 (autoload 'color-theme-approximate-on "color-theme-approximate")
 (color-theme-approximate-on)
+
+;; For clojure code, I like to use Cider 
+;; When using Cider, it's useful to add the following to ~/.lein/profiles.clj
+;;       :plugins [[cider/cider-nrepl "0.6.0"]]
+;; Enable eldoc in Clojure mode 
+(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
